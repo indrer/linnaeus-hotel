@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="847.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RoomView">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#preferencesClick" text="Preferences" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="roomTable" layoutX="14.0" layoutY="11.0" prefHeight="592.0" prefWidth="1174.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="97.0" text="ID" />
+                <TableColumn fx:id="singleBedCol" prefWidth="115.0" text="Single" />
+                  <TableColumn fx:id="doubleCol" prefWidth="168.0" text="Double (Single Beds)" />
+                  <TableColumn fx:id="doubleKingCol" prefWidth="194.0" text="Double (Kingsize Bed)" />
+                  <TableColumn fx:id="apartmentCol" prefWidth="159.0" text="Apartment" />
+                  <TableColumn fx:id="largeRoomCol" prefWidth="106.0" text="Large Rooms" />
+                  <TableColumn fx:id="viewCol" prefWidth="90.0" text="View" />
+                  <TableColumn fx:id="smokerCol" prefWidth="126.0" text="Smoker" />
+                  <TableColumn fx:id="priceCol" prefWidth="118.0" text="Price" />
+                  <TableColumn fx:id="roomStateCol" prefWidth="75.0" text="RoomState" />
+              </columns>
+            </TableView>
+            <Button fx:id="loadBtn" layoutX="1051.0" layoutY="623.0" mnemonicParsing="false" onAction="#onLoadBtnClick" prefHeight="31.0" prefWidth="110.0" text="Load" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
